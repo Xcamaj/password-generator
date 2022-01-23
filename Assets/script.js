@@ -5,7 +5,6 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = ["!", '"', "#", "$", "%", "&", "'", "(", ")"]
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -25,6 +24,7 @@ function generatePassword() {
   
 
 //if lowerCharacters is what user wants password concats to lowerCase and goes to password characters, same for the rest
+  
   if (lowerCharacters) {
     passwordCharacters = passwordCharacters.concat(lowerCase);
   }
@@ -42,14 +42,14 @@ function generatePassword() {
   }
 
   console.log(passwordCharacters);
-
   
   var passwordString = "";
   for (let i = 0; i < length; i++) {
     var randomIndex = Math.floor(Math.random() * passwordCharacters.length);
     passwordString = passwordString + passwordCharacters[randomIndex];
+    
   }
-
+  
   return passwordString;
  
 
